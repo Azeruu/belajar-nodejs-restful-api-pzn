@@ -1,0 +1,14 @@
+-- CreateTable
+CREATE TABLE `siswa` (
+    `id` INTEGER NOT NULL AUTO_INCREMENT,
+    `NISN` VARCHAR(100) NOT NULL,
+    `Nama` VARCHAR(100) NOT NULL,
+    `JK` VARCHAR(20) NOT NULL,
+    `NIK` VARCHAR(50) NOT NULL,
+    `username` VARCHAR(100) NOT NULL,
+
+    PRIMARY KEY (`id`)
+) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci ENGINE InnoDB;
+
+-- AddForeignKey
+ALTER TABLE `siswa` ADD CONSTRAINT `siswa_username_fkey` FOREIGN KEY (`username`) REFERENCES `users`(`username`) ON DELETE RESTRICT ON UPDATE CASCADE;

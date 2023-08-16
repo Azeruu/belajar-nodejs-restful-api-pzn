@@ -1,0 +1,58 @@
+POST http://localhost:3000/api/users
+Content-Type: application/json
+Accept: application/json
+
+{
+    "username" : "reza",
+    "email" : "reza@gmail.com",
+    "password" : "rahasia"
+    
+}
+
+###
+POST http://localhost:3000/api/users/login
+Content-Type: application/json
+Accept: application/json
+
+{
+    "username" : "reza",
+    "password" : "rahasia"
+    
+}
+
+### b6859561-07dc-4ca3-a0e0-293dc0e2280a
+###
+GET http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: b6859561-07dc-4ca3-a0e0-293dc0e2280a
+
+###
+PATCH http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: b6859561-07dc-4ca3-a0e0-293dc0e2280a
+
+{
+    "email" : "reza2@gmail.com"
+}
+
+###
+DELETE http://localhost:3000/api/users/logout
+Content-Type: application/json
+Accept: application/json
+Authorization: b6859561-07dc-4ca3-a0e0-293dc0e2280a
+
+###
+POST http://localhost:3000/api/siswa
+Content-Type: application/json
+Accept: application/json
+Authorization: b6859561-07dc-4ca3-a0e0-293dc0e2280a
+
+{
+    "NISN" : "0838",
+    "Nama ": "abah anom",
+    "JK" : "Laki",
+    "NIK" : "1910"
+    
+}
